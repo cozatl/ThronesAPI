@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //****************/
     const title = document.getElementById('thrones')
     if (title) {
-        const mainUrl = 'https://thronesapi.com/api/v2/characters/';
+        const mainUrl = 'https://cvsistemas.com.mx/api/v2/characters/';
         document.addEventListener('DOMContentLoaded', apiConn.loadCharacters(mainUrl));
         const searchCharacter = async () => {
             const throneId = document.getElementById('thronesSearch').value.toLowerCase();console.log(throneId);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     } else {
-        const mainUrl = 'https://thronesapi.com/api/v2/continents/';
+        const mainUrl = 'https://cvsistemas.com.mx/api/v2/continents/';
         document.addEventListener('DOMContentLoaded', apiConn.loadContinents(mainUrl));
         const searchCharacter = async () => {
             const continentId = document.getElementById('continentsSearch').value.toLowerCase();console.log(continentId);
