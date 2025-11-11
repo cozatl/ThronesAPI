@@ -2,7 +2,7 @@
 import ApiConnection from "./apiConn.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('script loaded in:',window.location.pathname);
+    //console.log('script loaded in:',window.location.pathname);
 
     const apiConn = new ApiConnection();    
     
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainUrl = 'https://cvsistemas.com.mx/api/v2/characters/';
         document.addEventListener('DOMContentLoaded', apiConn.loadCharacters(mainUrl));
         const searchCharacter = async () => {
-            const throneId = document.getElementById('thronesSearch').value.toLowerCase();console.log(throneId);
+            const throneId = document.getElementById('thronesSearch').value.toLowerCase();//console.log(throneId);
             if(throneId) {
                 try {
                     const response = await axios.get(`${mainUrl}${throneId}`);
