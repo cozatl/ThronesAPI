@@ -1,0 +1,48 @@
+@use '../libs/mixins';
+@use 'sass:map';
+
+button {  
+    border-radius: 25px;
+	background-color: map.get(mixins.$colors, btn-color);
+	color: map.get(mixins.$colors, white-color);
+	padding: 8px 18px;width: 100px;
+	vertical-align: bottom;
+    //margin-bottom: 10px;
+	//margin-left:20px;
+	&:hover {
+		border-color: map.get(mixins.$colors, black-color);
+        background-color: map.get(mixins.$colors, btn-hover);
+	}
+    &.toggle { //Only for javascript functions purposes (not needed)
+        background-color: cadetblue;
+    }
+}
+//Used for jquery code, not used in main javascript code
+.form {
+    width: 100%;margin: 0 auto;
+    text-align: center;
+    color: rgb(189, 186, 186);
+    fieldset {
+        border-width: 2px;border-style: groove;padding: 20px;
+    color: rgb(189, 186, 186);border-color: threedface;
+    }
+    div {
+        padding: 5px;
+    }
+    label,
+    input[type='text'],select, textarea {
+        width: 25%;border-radius: 10px;
+        background-color: rgb(212, 178, 178);
+        display: inline-block;
+        //padding: 10px 0;
+        //height: 35px;
+        font-size: 15px;
+        outline: none;                          //Skip outline when focusing any form element added and set config in jquery code
+        border: 2px solid rgb(212, 178, 178); //Avoid move elements when new__outline class is added (same size 2px)
+        transition: all .5s linear;             //Add delay to the movement
+
+        &.new__outline {
+            border: 2px solid blue;
+        }
+    }
+}

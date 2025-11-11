@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900;1000;1200&family=Montserrat:ital@0;1&display=swap");
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input, select, textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Main width for all the web page */
+/*
+	Variable defined as map, to set various configurations regarding the same item.
+*/
+/* Default block configuration */
+/* Default grid configuration */
+/* Default font configuration */
+/**-----------**/
+html {
+  /* Approximately 1.3rem=16px *** 1.7vw=16px *** 1rem = 16px */
+  font-size: clamp(1rem, 1.7vw, 1rem);
+  font-weight: 300;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+h1 {
+  /* Approximately 2=32px *** 1.7vw=31.62px-19.28px *** 1.2rem=19.2px */
+  font-size: clamp(1.2rem, 1.7vw, 2rem);
+  font-weight: 600;
+}
+
+h2 {
+  /* Approximately 1.3rem=20.8px *** 1.7vw=20.7px-16.031px *** 1rem = 16px */
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  font-weight: 600;
+}
+
+h3 {
+  /* Approximately 1.15rem=18.4px *** 1.7vw=18.3px-17.7px *** 1.1rem = 17.6px */
+  font-size: clamp(1.1rem, 1.7vw, 1.15rem);
+  font-weight: 600;
+}
+
+h4 {
+  /* Approximately 1rem = 16px *** 1.7vw=16px *** 1rem = 16px */
+  font-size: clamp(1rem, 1.7vw, 1rem);
+  font-weight: 600;
+}
+
+h5 {
+  /* Approximately .9rem=14.4px *** 1.7vw=16px *** .9rem=14.4px */
+  font-size: clamp(0.9rem, 1.7vw, 0.9rem);
+  font-weight: 600;
+}
+
+h6 {
+  /* Approximately .9rem=14.4px *** 1.7vw=16px *** .9rem=14.4px */
+  font-size: clamp(1rem, 1.7vw, 1rem);
+  font-weight: 300;
+}
+
+button {
+  border-radius: 25px;
+  background-color: rgb(53, 47, 47);
+  color: #fff;
+  padding: 8px 18px;
+  width: 100px;
+  vertical-align: bottom;
+}
+button:hover {
+  border-color: #000;
+  background-color: rgb(105, 94, 94);
+}
+button.toggle {
+  background-color: cadetblue;
+}
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(189, 186, 186);
+}
+.form fieldset {
+  border-width: 2px;
+  border-style: groove;
+  padding: 20px;
+  color: rgb(189, 186, 186);
+  border-color: threedface;
+}
+.form div {
+  padding: 5px;
+}
+.form label,
+.form input[type=text], .form select, .form textarea {
+  width: 25%;
+  border-radius: 10px;
+  background-color: rgb(212, 178, 178);
+  display: inline-block;
+  font-size: 15px;
+  outline: none;
+  border: 2px solid rgb(212, 178, 178);
+  transition: all 0.5s linear;
+}
+.form label.new__outline,
+.form input[type=text].new__outline, .form select.new__outline, .form textarea.new__outline {
+  border: 2px solid blue;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex; /* Default flex configuration */
+  flex-direction: row; /* Default always will be row */
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header div {
+  display: flex; /* Default flex configuration */
+  flex-direction: row; /* Default always will be row */
+  justify-content: space-between;
+}
+@media screen and (max-width: 51.25rem) {
+  .header {
+    padding: 15px;
+  }
+}
+.header .header__img {
+  width: 100px;
+  position: relative;
+}
+@media screen and (max-width: 51.25rem) {
+  .header .header__img {
+    width: 60px;
+  }
+}
+.header .header__i {
+  width: 50px;
+  cursor: pointer;
+}
+@media screen and (max-width: 51.25rem) {
+  .header .header__i {
+    width: 30px;
+  }
+}
+.header .header__i--menu {
+  /* Get filter background color for svg https://isotropic.co/tool/hex-color-to-css-filter/ */
+  filter: invert(72%) sepia(13%) saturate(1109%) hue-rotate(186deg) brightness(99%) contrast(91%);
+}
+.header .header__i__img {
+  width: 80%;
+}
+.header .header__menu {
+  width: 300px;
+  z-index: 10;
+  background: linear-gradient(#473a3a, #222);
+  color: #fff;
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed; /* Cart will hide and will show itself as menu */
+  left: -100%; /* Hide cart */
+  top: 100px; /* */
+  box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+.header .header__menu.show {
+  left: 0px;
+}
+.header .header__menu img {
+  filter: invert(100%);
+  cursor: pointer;
+  display: flex;
+  justify-self: right;
+}
+@media screen and (max-width: 30rem) {
+  .header .header__menu {
+    width: 100%;
+    top: 60px;
+    box-shadow: none; /* since it will use all space we don't need box shadow */
+  }
+}
+
+/* Basic styling for the main menu */
+.vertical-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Adjust as needed */
+}
+
+.vertical-menu li {
+  transition: all 2.5s ease;
+}
+.vertical-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(#000, #222);
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hide sub-menus by default */
+.vertical-menu ul ul {
+  max-height: 0; /* Hide menu (high value = 0) */
+  overflow: hidden; /* Hide content while it is collapsed */
+  opacity: 0; /* Transparent */
+  transform: translateY(-4px); /* Slight upward shift */
+  pointer-events: none; /* Avoid focus / hover while it is closed */
+  transition: max-height 0.7s ease, opacity 0.6s ease, transform 0.6s ease; /* Slower effect by adjusting duration */
+}
+
+/* Show sub-menus on hover of the parent list item */
+.vertical-menu li:hover > ul {
+  /* Estado expandido */
+  max-height: 500px; /* Adjust value if more items are added */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Open with keyboard (accesibility) when the link receives focus and navigate inside */
+.vertical-menu li:focus-within > ul {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/**     CSS   **/
+body {
+  width: 100%; /* Assure the page reaches all screen size */
+  /* Approximately 1.3rem=16px *** 1.7vw=16px *** 1rem = 16px */
+  font-size: clamp(1rem, 1.7vw, 1rem);
+  font-weight: 300;
+  color: #6e6565;
+  background-color: rgb(27, 27, 27);
+  font-family: "Montserrat", Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.banner {
+  width: 100%;
+  padding: 70px 0;
+  display: block;
+  text-align: center;
+  background-image: url("../../img/logo.jpg");
+  background-repeat: no-repeat; /* To avoid repeat images when a width finishes */
+  background-size: cover; /* set background value, can be express in Percentage */
+  color: #fff;
+  background-position-y: 60%; /* Move image vertically */
+}
+@media screen and (max-width: 30rem) {
+  .banner {
+    padding: 30px 0;
+  }
+}
+
+.banner__title {
+  width: 100%;
+  /* Approximately 2=32px *** 1.7vw=31.62px-19.28px *** 1.2rem=19.2px */
+  font-size: clamp(1.2rem, 1.7vw, 2rem);
+  font-weight: 600;
+}
+
+.banner__description {
+  width: 350px;
+  margin: 0 auto; /* Position in the middle */
+  /* Approximately 1.3rem=20.8px *** 1.7vw=20.7px-16.031px *** 1rem = 16px */
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.search__container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#thronesSearch, #continentsSearch {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.thrones__grid, .continents__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.thrones__card, .continent__card {
+  background-color: #4dd1e2;
+  border-radius: 20px;
+  display: flex; /* Default flex configuration */
+  flex-direction: row; /* Default always will be row */
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.25 ease;
+  cursor: pointer;
+}
+
+.thrones__card:hover, .continent__card:hover {
+  transform: translateY(-5px);
+}
+
+.thrones__info, .continent__info {
+  display: flex; /* Default flex configuration */
+  flex-direction: column; /* Default always will be row */
+  justify-content: space-between;
+}
+
+.throne__name, .continent__name {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.thrones__desc {
+  display: flex; /* Default flex configuration */
+  flex-direction: column; /* Default always will be row */
+  justify-content: space-between;
+}
+
+.throne__desc, .continent__desc {
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 5px 5px 5px 0;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  background-color: #2bbaba;
+}
+
+.throne__title {
+  background-color: #2dac8c;
+}
+
+.throne__family {
+  background-color: #362583;
+  color: #fff;
+}
+
+.throne__image__container, .continent__image__container {
+  flex-shrink: 0;
+}
+
+.throne__image, .continent__image {
+  width: 96px;
+  height: 96px;
+  border-radius: 25px;
+}/*# sourceMappingURL=main.css.map */
