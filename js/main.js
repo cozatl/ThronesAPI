@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainUrl = 'https://cvsistemas.com.mx/api/v2/continents/';
         document.addEventListener('DOMContentLoaded', apiConn.loadContinents(mainUrl));
         const searchCharacter = async () => {
-            const continentId = document.getElementById('continentsSearch').value.toLowerCase();console.log(continentId);
+            const continentId = document.getElementById('continentsSearch').value.toLowerCase();//console.log(continentId);
             if(continentId) {
                 try {
                     const response = await axios.get(`${mainUrl}${continentId}`);
